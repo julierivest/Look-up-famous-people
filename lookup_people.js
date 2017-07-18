@@ -22,6 +22,7 @@ client.connect((err) => {
   if (err) {
     return console.error("error running query", err);
   }
+  //console.log(result);
   console.log("Searching...");
   console.log(`Found ${result.rowCount} person(s) by the name ${name}:`);
   for (let i = 0; i < result.rowCount; i++) {
@@ -30,6 +31,7 @@ client.connect((err) => {
   client.end();
   });
 });
+
 function formatDate(birthdate) {
   return birthdate.toISOString().substr(0, 10);
 };
