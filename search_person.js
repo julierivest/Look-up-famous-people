@@ -1,12 +1,13 @@
 const settings = require("./settings");
 
+
 var knex = require('knex')({
   client: 'pg',
   connection: {
-    host : settings.hostname,
-    user : settings.user,
-    password : settings.password,
-    database : settings.database
+    host : settings.development.hostname,
+    user : settings.development.user,
+    password : settings.development.password,
+    database : settings.development.database
   }
 });
 
